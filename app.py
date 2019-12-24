@@ -29,6 +29,7 @@ def present():
         return render_template('present.html',present_URL = presented_URL)
     else:
         return redirect('/')
+
 if __name__ == "__main__":
     # webサーバー立ち上げ
     q_1000.put("https://www.amazon.co.jp/%E6%A0%97%E5%8E%9F%E5%9C%92-%E3%83%91%E3%82%A6%E3%83%B3%E3%83%89%E3%82%B1%E3%83%BC%E3%82%AD%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9-200g/dp/B07FMTV5GF/ref=sr_1_13?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&keywords=%E3%82%B1%E3%83%BC%E3%82%AD&qid=1577206099&refinements=p_76%3A2227292051&rnid=2227291051&rps=1&sr=8-13")

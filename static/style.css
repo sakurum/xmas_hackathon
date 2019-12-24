@@ -13,3 +13,19 @@ body {
     border-radius: 2em;
     border: 1px solid #aaa;
 }
+
+.form_line {
+    width: 100%
+}
+
+.line_title {
+    display: inline-block;
+    width: 4em;
+}
+
+.form {
+    display: inline-block;
+}
+
+.submit {
+}
