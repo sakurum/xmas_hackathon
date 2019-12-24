@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
-<h3>プレゼントを贈ろう</h3>
+<h2>プレゼントを贈ろう</h2>
 
 <form action="/" method="POST">
-    <input type="url" name="posturl" value="" placeholder="https://www.amazon.co.jp/あげたいプレゼント" size="40"></input>
+    <input type="url" class="input_posturl" name="posturl" value="" placeholder="https://www.amazon.co.jp/あげたいプレゼント" size="40"></input>
+    <input type="submit" name="submit" value="このプレゼントを贈る">
 </form>
 
 {% endblock %}
