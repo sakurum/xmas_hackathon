@@ -1,11 +1,27 @@
 # coding: utf-8
 from flask import *
 import queue
+import sys, os
+import re
+import urllib.request
+from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 q_1000 = queue.Queue()
 q_5000 = queue.Queue()
 q_10000 = queue.Queue()
+
+def title(url):
+    d = urllib.request.urlopen(url).read().decode('UTF-8')
+    # htmlをBeautifulSoupでパース
+    soup = BeautifulSoup(d, "html.parser")
+
+    # タイトル要素の取得
+    print(soup.title) # <title>アルゴリズム雑記</title>
+
+    # タイトル要素の文字列を取得
+    print(soup.title.string) # アルゴリズム雑記
+    return soup.title.string
 
 @app.route('/', methods=["GET", "POST"])
 def index():
@@ -26,7 +42,9 @@ def present():
         else:
             q_10000.put(presenting_URL)
             presented_URL = q_10000.get()
-        return render_template('present.html',present_URL = presented_URL)
+        present_title = title(presented_URL)
+        print(present_title)
+        return render_template('present.html',present_URL = presented_URL,present_title = present_title)
     else:
         return redirect('/')
 
