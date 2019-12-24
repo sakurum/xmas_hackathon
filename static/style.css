@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+body {
+  margin: 10%;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 1em 0;
+  padding: .8em;
+  border-radius: 2em;
+  border: 1px solid #aaa;
+}
