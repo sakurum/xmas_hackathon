@@ -2,7 +2,9 @@
 
 body {
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    margin: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
 }
 
 .input_posturl {
@@ -20,7 +22,7 @@ body {
 
 .line_title {
     display: inline-block;
-    width: 4em;
+    width: 3em;
 }
 
 .form {
@@ -28,4 +30,25 @@ body {
 }
 
 .submit {
+    margin-top: 10px;
+}
+
+.btn-square-shadow {
+    font-size: 100%;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: 1px solid #aaa;
+    border-radius: 2em;
+}
+
+.btn-square-shadow:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);/*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+    border-bottom: none;
 }
