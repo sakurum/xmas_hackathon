@@ -9,4 +9,4 @@ def index():
 
 if __name__ == "__main__":
     # webサーバー立ち上げ
-app.run(port=8000,debug=True)
+    app.run(port=8000,debug=True)
