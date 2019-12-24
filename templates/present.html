@@ -1,11 +1,4 @@
 {% extends "layout.html" %}
 {% block content %}
-<h2>プレゼントを贈ろう</h2>
-
-<form action="/present" method="POST">
-    ねだん <input type="number" class="price_form" id="present_price" name="present_price">
-    URL <input type="number" class="price_form" id="present_url" name="present_url">
-    <input type="submit" name="submit" value="このプレゼントを贈る">
-</form>
-
+{{present_URL}}
 {% endblock %}

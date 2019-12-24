@@ -14,9 +14,9 @@ def index():
 @app.route('/present', methods=["GET", "POST"])
 def present():
     if request.method == "POST":
-        price = request.form["present_price"]
+        price = int(request.form["present_price"])
         presenting_URL = request.form["present_URL"]
-        presented_URL
+        presented_URL = ""
         if price <=1000:
             q_1000.put(presenting_URL)
             presented_URL = q_1000.get()
